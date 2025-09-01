@@ -8,25 +8,19 @@ export default function WeatherInfo(props) {
       <h1>
         {props.data.city}, {props.data.country}
       </h1>
-      <ul>
-        <li>
-          <FormattedDate date={props.data.date} />
-        </li>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
-      <div className="row mt-3">
-        <div className="col-6">
-          <div className="clearfix">
-            <img
-              src={props.data.iconURL}
-              alt="{props.data.icon}"
-              className="float-left"
-            />
-            <span className="temperature">
-              {Math.round(props.data.temperature)}
-              <span className="unit">°C</span>
-            </span>
-          </div>
+      <p>
+        <FormattedDate date={props.data.date} />
+      </p>
+      <div className="row mt-2">
+        <div className="col-7">
+          <img
+            src={props.data.iconURL}
+            alt="{props.data.icon}"
+            className="float-left"
+          />
+          <WeatherTemperature
+            celsius={props.data.temperature}
+          />
         </div>
         <div className="col-5">
           <ul>
