@@ -9,7 +9,7 @@ function App() {
         <header className="App-header">
           <h1>Weather Application</h1>
         </header>
-        <Weather defaultCity="New York" />
+        <Weather defaultCity="Paris" />
         <footer className="App-footer">
           <p>
             This project was coded by Jessica Pintado and is{" "}
