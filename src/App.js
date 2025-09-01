@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
@@ -7,7 +7,17 @@ function App() {
         <h1>Weather Application</h1>
       </header>
       <footer className="App-footer">
-        <p>This project was coded by Jessica Pintado and is open-sourced on GitHub.</p>
+        <p>
+          This project was coded by Jessica Pintado and is{" "}
+          <a
+            href="https://github.com/jdmpintado/react-weather-app-w5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>
+          .
+        </p>
       </footer>
     </div>
   );
