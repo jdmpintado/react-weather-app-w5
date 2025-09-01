@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import Weather from "./Weather"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <header className="App-header">
           <h1>Weather Application</h1>
         </header>
+        <Weather defaultCity="New York" />
         <footer className="App-footer">
           <p>
             This project was coded by Jessica Pintado and is{" "}
