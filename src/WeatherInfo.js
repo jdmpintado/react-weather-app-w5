@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
-import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -9,34 +8,28 @@ export default function WeatherInfo(props) {
       <h1>
         {props.data.city}, {props.data.country}
       </h1>
-      <p>
-        <FormattedDate date={props.data.date} />
-      </p>
-      <div className="row mt-2">
+      <ul>
+        <li>
+          <FormattedDate date={props.data.date} />
+        </li>
+        <li className="text-capitalize">{props.data.description}</li>
+      </ul>
+      <div className="row mt-3">
         <div className="col-6">
-            <img src={props.data.iconURL} alt="{props.data.icon}" className="float-left" />
-            <WeatherTemperature celsius={props.data.temperature} className="float-left" />
-      <p>
-        <FormattedDate date={props.data.date} />
-      </p>
-      <div className="row mt-2">
-        <div className="col-7">
-          <img
-            src={props.data.iconURL}
-            alt="{props.data.icon}"
-            className="float-left"
-          />
-          <WeatherTemperature
-            celsius={props.data.temperature}
-          />
+          <div className="clearfix">
+            <img
+              src={props.data.iconURL}
+              alt="{props.data.icon}"
+              className="float-left"
+            />
+            <span className="temperature">
+              {Math.round(props.data.temperature)}
+              <span className="unit">°C</span>
+            </span>
+          </div>
         </div>
         <div className="col-5">
           <ul>
-            <li className="text-capitalize">{props.data.description}</li>
-            <li>
-              Humidity:
-              {props.data.humidity}%
-            </li>
             <li className="text-capitalize">{props.data.description}</li>
             <li>
               Humidity:
