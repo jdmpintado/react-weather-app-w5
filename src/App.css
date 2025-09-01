@@ -1,0 +1,14 @@
+.App {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.App-header h1 {
+  text-align: center;
+}
+
+.App footer {
+  text-align: center;
+  margin: 0;
+  font-size: 11px;
+}
